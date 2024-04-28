@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>绝对路径</h1>
+    <p>
+      <a
+        href="http://localhost:5500/static/image/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG..jpeg"
+        >http://localhost:89/static/image/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG..jpeg</a
+      >
+    </p>
+    <p>
+      <a
+        href="//localhost:5500/static/image/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG..jpeg"
+        >//localhost:89/static/image/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG..jpeg</a
+      >
+    </p>
+    <p>
+      <a
+        href="/static/image/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG..jpeg"
+        >/static/image/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG..jpeg</a
+      >
+    </p>
+    <h1>相对路径</h1>
+    <p>
+      <a
+        href="../../static/image/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG..jpeg"
+        >../../static/image/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG..jpeg</a
+      >
+    </p>
+    <p>
+      <a
+        href="./static/image/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG..jpeg"
+        >./static/image/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG..jpeg</a
+      >
+    </p>
+    <p>
+      <a
+        href="static/image/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG..jpeg"
+        >static/image/u=1716935870,2287845863&fm=253&fmt=auto&app=120&f=JPEG..jpeg</a
+      >
+    </p>
+    <script src="/static/js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        /* $("p a").each(function () {
+          console.count("path");
+          $(this).html(this.href);
+        }); */
+      });
+    </script>
+  </body>
+</html>

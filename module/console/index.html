@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>console</h1>
+    <script src="/static/js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        console.debug("debug");
+        console.info("info");
+        console.warn("warn");
+        console.error("error");
+        console.log("log");
+        console.assert(1 === 2, "assert");
+        console.time("time");
+        const start = Date.now();
+        while (Date.now() - start < 1) {
+          console.count("count");
+          console.timeLog("time", "timeLog");
+          console.timeStamp("timeStamp");
+        }
+        console.countReset("count");
+        console.timeEnd("time");
+        console.group("group");
+        console.log("Hello World!");
+        console.log("Hello World!");
+        console.log("Hello World!");
+        console.groupEnd("groupEnd");
+        console.groupCollapsed("groupCollapsed");
+        console.log("Hello World!");
+        console.log("Hello World!");
+        console.log("Hello World!");
+        console.groupEnd("groupCollapsed");
+        a();
+        c();
+        console.table([
+          {
+            name: "张三",
+            age: 18,
+            gender: "男",
+          },
+          { name: "李四", age: 20, gender: "女" },
+          { name: "王五", age: 22, gender: "男" },
+        ]);
+      });
+      console.log("log style%clog style%clog style","color:red","color:blue");
+      console.log("log style%c%s%c%s","color:red","log style","color:blue","log style");
+      console.log(fn, "log fn");
+      console.dir(fn);
+      console.log(document.body, "log body");
+      console.dir(document.body);
+
+      function c() {
+        setTimeout(function () {
+          console.clear();
+        }, 10000);
+      }
+
+      function a() {
+        b();
+      }
+      function b() {
+        console.trace("b");
+      }
+
+      function fn() {
+        console.count("fn");
+      }
+      fn.v = 123;
+    </script>
+  </body>
+</html>
